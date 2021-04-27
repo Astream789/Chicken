@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>nhập cân nặng</h1>
+    <input id="weight" type="number"/> <br/>
+    <h1>chiều cao</h1>
+    <input id="height" type="number"/> <br/> 
+      <br/>
+
+    <Button onclick="BMI()">tính BMI</Button>
+
+    <script>
+
+        function BMI() {
+
+            let num_1= +document.getElementById("weight").value;
+            let num_2= +document.getElementById("height").value;
+
+            let result = num_1 / Math.pow(num_2,2);
+
+            if (result < 16)
+    document.write("Gầy độ III BMI: " + result);
+else if (result < 17)
+    document.write("Gầy độ II BMI: " + result);
+else if (result < 18.5)
+    document.write("Gầy độ I BMI: " + result);
+else if (result < 25)
+    document.write("Bình thường BMI: " + result);
+        
+        }
+       
+
+    </script>    
+</body>
+</html>
